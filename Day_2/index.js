@@ -19,3 +19,20 @@ function lengthConverter(length, conversionType) {
   console.log(lengthConverter(10, "feetToMeters")); 
   console.log(lengthConverter(15, "invalidType")); 
   
+// 2. Calculate the sum of numbers within an array
+
+function calculateSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof arr[i] === 'number') {
+        sum += arr[i];
+      }
+    }
+    return sum;
+  }
+  
+  // Example usage:
+  const numbers = [1, 2, 3, 4, 5];
+  const result = calculateSum(numbers);
+  console.log('The sum of the numbers in the array is: ' + result);
+  
