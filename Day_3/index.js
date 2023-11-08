@@ -29,3 +29,18 @@ function sortArray(arr) {
   const sortedArray = sortArray(unsortedArray);
   console.log('Sorted Array (Lowest to Highest):', sortedArray);
   
+
+//Create a function that filters out negative numbers
+
+
+function filterOutNegativeNumbers(arr) {
+    return arr.filter(number => number >= 0);
+  }
+  
+  // Example usage:
+  const originalArr = [5, -3, 9, -1, 7, -10, 2];
+  console.log('Original Array:', originalArr);
+  
+  const positiveNumbers = filterOutNegativeNumbers(originalArr);
+  console.log('Filtered Positive Numbers:', positiveNumbers);
+  
