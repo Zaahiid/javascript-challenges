@@ -15,3 +15,17 @@ function reverseArray(arr) {
   const reversedArray = reverseArray(originalArray);
   console.log('Reversed Array:', reversedArray);
   
+
+//Sort an array from lowest to highest
+
+function sortArray(arr) {
+    return arr.sort((a, b) => a - b);
+  }
+  
+  // Example usage:
+  const unsortedArray = [5, 3, 9, 1, 7];
+  console.log('Unsorted Array:', unsortedArray);
+  
+  const sortedArray = sortArray(unsortedArray);
+  console.log('Sorted Array (Lowest to Highest):', sortedArray);
+  
