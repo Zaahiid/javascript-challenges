@@ -24,4 +24,20 @@ function isDivisibleByTen(number) {
   
   const num2 = 17;
   console.log(`${num2} is divisible by 10: ${isDivisibleByTen(num2)}`);
+
+
+
+//10. Return the number of vowels in a string
+
+function countVowels(str) {
+    const vowelRegex = /[aeiou]/gi; // Regular expression to match vowels (both lowercase and uppercase)
+    const vowels = str.match(vowelRegex);
+    return vowels ? vowels.length : 0;
+  }
+  
+  // Example usage:
+  const sentence = "This is a sample sentence to count vowels.";
+  const vowelCount = countVowels(sentence);
+  console.log(`The number of vowels in the sentence is: ${vowelCount}`);
+  
   
