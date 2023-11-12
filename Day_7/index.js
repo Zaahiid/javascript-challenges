@@ -46,3 +46,48 @@ function longestPalindrome(s) {
   console.log(longestPalindrome("babad"));   // Output: "bab" or "aba"
   console.log(longestPalindrome("cbbd"));     // Output: "bb"
   
+
+  // 6. ZigZag Conversion
+// Medium  26%
+
+// The string "PAYPALISHIRING" is written in a zigzag pattern on a given number
+// of rows like this: (you may want to display this pattern in a fixed font for
+// better legibility)
+
+// P   A   H   N
+// A P L S I I G
+// Y   I   R
+
+// And then read line by line: "PAHNAPLSIIGYIR"
+
+// Write the code that will take a string and make this conversion given a
+// number of rows:
+
+// string convert(string text, int nRows);
+
+// convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".
+
+function convert(text, numRows) {
+    if (numRows === 1 || numRows >= text.length) {
+      return text;
+    }
+  
+    const rows = Array.from({ length: numRows }, () => '');
+    let direction = 1; // 1 for down, -1 for up
+    let currentRow = 0;
+  
+    for (let char of text) {
+      rows[currentRow] += char;
+      currentRow += direction;
+  
+      if (currentRow === 0 || currentRow === numRows - 1) {
+        direction *= -1; // Change direction when reaching the top or bottom row
+      }
+    }
+  
+    return rows.join('');
+  }
+  
+  // Example:
+  console.log(convert("PAYPALISHIRING", 3)); // Output: "PAHNAPLSIIGYIR"
+  
