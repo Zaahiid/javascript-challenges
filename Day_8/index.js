@@ -76,3 +76,20 @@ function myAtoi(str) {
   console.log(myAtoi("words and 987"));    // Output: 0 (no valid conversion)
   console.log(myAtoi("-91283472332"));      // Output: -2147483648 (INT_MIN)
   
+
+  // 9. Palindrome Number
+// Easy   35%
+
+// Determine whether an integer is a palindrome. Do this without extra space.
+
+// click to show spoilers. Some hints:
+// Could negative integers be palindromes? (ie, -1)
+
+// If you are thinking of converting the integer to string, note the restriction
+// of using extra space.
+
+// You could also try reversing an integer. However, if you have solved the
+// problem "Reverse Integer", you know that the reversed integer might overflow.
+// How would you handle such case?
+
+// There is a more generic way of solving this problem.
