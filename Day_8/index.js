@@ -93,3 +93,27 @@ function myAtoi(str) {
 // How would you handle such case?
 
 // There is a more generic way of solving this problem.
+
+function isPalindrome(x) {
+    // Negative numbers and numbers ending with 0 are not palindromes
+    if (x < 0 || (x % 10 === 0 && x !== 0)) {
+      return false;
+    }
+  
+    let reversed = 0;
+    let original = x;
+  
+    while (x > 0) {
+      const digit = x % 10;
+      reversed = reversed * 10 + digit;
+      x = Math.floor(x / 10);
+    }
+  
+    return original === reversed;
+  }
+  
+  // Examples:
+  console.log(isPalindrome(121));    // Output: true
+  console.log(isPalindrome(-121));   // Output: false (negative number)
+  console.log(isPalindrome(10));     // Output: false (ends with 0)
+  
