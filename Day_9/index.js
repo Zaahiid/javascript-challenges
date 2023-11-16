@@ -52,4 +52,41 @@ function isMatch(s, p) {
   console.log(isMatch("aa", ".*"));      // Output: true
   console.log(isMatch("ab", ".*"));      // Output: true
   console.log(isMatch("aab", "c*a*b"));  // Output: true
+
+  // 11. Container With Most Water
+// Medium   36%
+
+// Given n non-negative integers a1, a2, ..., an, where each represents a point
+// at coordinate (i, ai). n vertical lines are drawn such that the two endpoints
+// of line i is at (i, ai) and (i, 0). Find two lines, which together with
+// x-axis forms a container, such that the container contains the most water.
+
+// Note: You may not slant the container and n is at least 2.
+
+function maxArea(height) {
+    let maxWater = 0;
+    let left = 0;
+    let right = height.length - 1;
+  
+    while (left < right) {
+      const h = Math.min(height[left], height[right]);
+      const w = right - left;
+      const area = h * w;
+  
+      maxWater = Math.max(maxWater, area);
+  
+      if (height[left] < height[right]) {
+        left++;
+      } else {
+        right--;
+      }
+    }
+  
+    return maxWater;
+  }
+  
+  // Example:
+  const height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+  console.log(maxArea(height));  // Output: 49
+  
   
