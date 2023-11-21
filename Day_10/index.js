@@ -46,3 +46,37 @@ function intToRoman(num) {
 // Given a roman numeral, convert it to an integer.
 
 // Input is guaranteed to be within the range from 1 to 3999.
+
+function romanToInt(s) {
+    const romanMap = {
+      'I': 1,
+      'V': 5,
+      'X': 10,
+      'L': 50,
+      'C': 100,
+      'D': 500,
+      'M': 1000,
+    };
+  
+    let result = 0;
+  
+    for (let i = 0; i < s.length; i++) {
+      const currentSymbolValue = romanMap[s[i]];
+      const nextSymbolValue = romanMap[s[i + 1]];
+  
+      if (nextSymbolValue > currentSymbolValue) {
+        result += (nextSymbolValue - currentSymbolValue);
+        i++; // Skip the next symbol since it's already considered
+      } else {
+        result += currentSymbolValue;
+      }
+    }
+  
+    return result;
+  }
+  
+  // Examples:
+  console.log(romanToInt('III'));    // Output: 3
+  console.log(romanToInt('LVIII'));  // Output: 58
+  console.log(romanToInt('MCMXCIV'));  // Output: 1994
+  
