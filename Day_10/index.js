@@ -39,3 +39,10 @@ function intToRoman(num) {
   console.log(intToRoman(58));   // Output: 'LVIII'
   console.log(intToRoman(1994)); // Output: 'MCMXCIV'
   
+
+  // 13. Roman to Integer
+// Easy   46%
+
+// Given a roman numeral, convert it to an integer.
+
+// Input is guaranteed to be within the range from 1 to 3999.
